@@ -1,0 +1,13 @@
+type City {
+    id: ID!
+    name: String!
+    population: Float!
+}
+
+type Query {
+    findAllCities: [City]!
+}
+
+type Mutation {
+    createCity(name:String, population: Float): City!
+}

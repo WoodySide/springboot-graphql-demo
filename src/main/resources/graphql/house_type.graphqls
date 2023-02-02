@@ -1,0 +1,8 @@
+enum HouseType {
+
+    CONDO,
+
+    TOWN_HOUSE,
+
+    APARTMENT
+}

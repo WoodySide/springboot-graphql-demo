@@ -1,0 +1,16 @@
+type Address {
+    id: ID!
+    street: String!
+    houseNumber: Int
+    cityName: String!
+    zipcode: Float!
+    house: House
+}
+
+extend type Query {
+    findAllAddresses: [Address]!
+}
+
+extend type Mutation {
+    createAddress(street: String, houseNumber: Int, zipcode: Float, houseId: Int, cityId: Int): Address!
+}

@@ -1,0 +1,14 @@
+type House {
+    id: ID!
+    houseType: HouseType
+    city: City
+    address: Address
+}
+
+extend type Query {
+    findAllHouses: [House]!
+}
+
+extend type Mutation {
+    createHouse(houseType: HouseType, cityId: Int): House
+}
