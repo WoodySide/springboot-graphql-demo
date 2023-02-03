@@ -22,7 +22,6 @@ public class Mutation implements GraphQLMutationResolver {
     private final CityRepository cityRepository;
     private final HouseRepository houseRepository;
 
-
     public City createCity(String name, Long population) {
 
         City city = City.builder()
@@ -73,5 +72,10 @@ public class Mutation implements GraphQLMutationResolver {
         addressRepository.save(address);
 
         return address;
+    }
+
+    public boolean deleteCity(Integer cityId) {
+        cityRepository.deleteById(cityId);
+        return true;
     }
 }

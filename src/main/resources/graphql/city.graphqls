@@ -10,4 +10,5 @@ type Query {
 
 type Mutation {
     createCity(name:String, population: Float): City!
+    deleteCity(id: ID): Boolean
 }

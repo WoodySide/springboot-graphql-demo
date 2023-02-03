@@ -10,5 +10,5 @@ extend type Query {
 }
 
 extend type Mutation {
-    createHouse(houseType: HouseType, cityId: Int): House
+    createHouse(houseType: HouseType, city: ID): House!
 }
